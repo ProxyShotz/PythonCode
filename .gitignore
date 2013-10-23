@@ -1,0 +1,176 @@
+from Myro import *
+init("sim")
+
+e5=659.26
+fs5=739.99
+g5=783.99
+a5=880
+b5=987.77
+d5=587.33
+b4=493.88
+a4=440
+g4=392
+e4=329.63
+b3=246.94
+cs5=554.37
+d4=293.66
+fs4=369.99
+ds5=622.25
+c5=523.25
+f5=698.46
+as4=466.16
+gs4=415.3
+e3=164.81
+a3=220
+b3=246.94
+c4=261.63
+
+def danceSing():
+   waltz()
+   wobble()
+   primalDialga()
+   luigiMansion()
+
+def waltz():
+   forward(1,1)
+   turnRight(1,0.5)
+   backward(1,1)
+   turnLeft(1,0.5)
+   forward(1,2)
+   turnLeft(1,1)
+   turnRight(1,1)
+   forward(1,1)
+   backward(1,2)
+   turnLeft(1,1)
+   backward(1,1)
+   forward(1,1)
+   turnRight(1,2)
+   forward(1,0.5)
+   turnLeft(1,1)
+   backward(1,0.5)
+   turnRight(1,2)
+   forward(1,0.5)
+   turnLeft(1,1)
+   forward(1,1)
+   turnRight(1,6)
+
+def wobble():
+   forward(1,1)
+   turnRight(1,0.5)
+   turnLeft(1,0.5)
+   turnRight(1,0.5)
+   turnLeft(1,0.5)
+   backward(1,1)
+   turnRight(1,0.5)
+   turnLeft(1,0.5)
+   turnRight(1,0.5)
+   turnLeft(1,0.5)
+   backward(1,1)
+   backward(1,1)
+   forward(1,1)
+   forward(1,1)
+   turnLeft(1,0.5)
+   turnRight(1,0.5)
+   turnLeft(1,0.5)
+   turnRight(1,0.5)
+   forward(1,1)
+   backward(1,1)
+   turnRight(1,0.5)
+   forward(1,0.5)
+   turnRight(1,0.5)
+   forward(1,1)
+   forward(1,1)
+   turnLeft(1,0.5)
+   backward(1,0.5)
+   turnLeft(1,0.5)
+   backward(1,1)
+   turnLeft(1,0.5)
+   turnRight(1,0.5)
+   forward(1,0.5)
+   turnRight(1,0.5)
+
+def primalDialga():
+   aList = [e5,fs5,g5,a5]
+   bList = [b3,fs4,e4,a4,fs4,cs5,b4,e5]
+   for f in aList:
+      beep(0.125,f)
+   beep(1.75,b5)
+   beep(0.125,a5)
+   beep(0.125,g5)
+   beep(0.75,fs5)
+   beep(0.75,d5)
+   beep(0.5,fs5)
+   beep(0.75,e5)
+   beep(0.75,b4)
+   beep(0.5,a4)
+   beep(0.75,b4)
+   for f in bList:
+      beep(0.125,f)
+   beep(0.375,fs5)
+   beep(0.375,b4)
+   beep(0.25,a4)
+   beep(1,b4)
+   beep(0.375,e5)
+   beep(0.375,a4)
+   beep(0.25,b4)
+   beep(1,e4)
+   beep(0.375,fs5)
+   beep(0.375,b4)
+   beep(0.25,a4)
+   beep(1,b4)
+   beep(0.5,g4)
+   beep(0.75,fs4)
+   beep(0.75,e4)
+   beep(0.5,d4)
+   beep(1,e4)
+
+def luigiMansion():
+   aList=[e5,g5,fs5,ds5,d5,f5]
+   bList=[e5,d5,c5,b4]
+   cList=[e3,a3,b3,c4,d4]
+   dList=[ds5,e5,b4,as4,b4]
+   for f in aList:
+      beep(1,f)
+   for f in bList:
+      beep(0.25,f)
+   beep(2,a4)
+   for f in cList:
+      beep(0.25,f)
+   beep(0.5,a4)
+   beep(1,c5)
+   beep(0.5,b4)
+   beep(0.25,ds5)
+   beep(0.25,e5)
+   beep(0.5,ds5)
+   beep(1,d5)
+   beep(0.25,cs5)
+   beep(0.25,d5)
+   beep(0.5,cs5)
+   beep(1,c5)
+   beep(0.25,b4)
+   beep(0.25,c5)
+   beep(1,b4)
+   beep(0.75,as4)
+   for f in dList:
+      beep(0.25,f)
+   beep(3,e4)
+
+def menu():
+   while True:
+      try:
+         num = int(input("1. The Wobble  2. Waltz  3. Primal Dialga  4. Luigi's Mansion  0. Exit.  Which dance step/song would you like?"))
+         if num == 0:
+            print("Have a good day!")
+            return
+         elif num == 1:
+            wobble()
+         elif num == 2:
+            waltz()
+         elif num == 3:
+            primalDialga()
+         elif num == 4:
+            luigiMansion()
+         else:
+            print("Sorry, I don't know that one.")
+      except:
+         print("Sorry, I don't know that one.")
